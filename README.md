@@ -94,3 +94,4 @@ credentials; every secret is an environment variable (see the
 | Grouped test R² / MAE / RMSE | 0.7423 / ₹21.46L / ₹74.38L | reproduced in `AUDIT_REPORT.md` |
 | Geographic generalisation R² | 0.42–0.61 (protocol-dependent) | training stage + audit |
 | Token rule | supply = floor(valuation ₹ / 10,000), residual untokenised | contract + backend, cross-verified |
+# ML-PROJECT
