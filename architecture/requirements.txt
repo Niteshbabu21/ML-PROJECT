@@ -1,0 +1,60 @@
+# =============================================================================
+# Real Estate Valuation & Tokenisation — Python requirements (FOR APPROVAL)
+# =============================================================================
+# Two install targets share this file:
+#   [TRAIN]  ml environment      : pip install -r requirements.txt   (offline)
+#   [SERVE]  backend environment : pip install -r requirements.txt   (Render)
+# Versions are PINNED to the verified Stage 2–3b environment (ml/requirements
+# .lock.txt, Python 3.12.3) — the fitted pipeline in ml/model.pkl will only
+# unpickle reliably against these exact ML library versions. Do not upgrade
+# any pinned ML library without retraining + re-verification (Stage protocol).
+# =============================================================================
+
+# ---- Runtime (pinned to verified interpreter) -------------------------------
+# python == 3.12.3
+
+# ---- Core data / ML stack [TRAIN + SERVE: serving loads the pipeline] -------
+pandas==2.3.3
+numpy==2.0.2
+scikit-learn==1.6.1
+scipy==1.18.1
+joblib==1.6.0
+
+# ---- Gradient-boosting models [TRAIN; SERVE needs all three to load pkl] ----
+catboost==1.2.10          # FINAL MODEL (Stage 3b) — required at serve time
+xgboost==3.0.5            # benchmark candidate / challenger artefact
+lightgbm==4.6.0           # benchmark candidate
+
+# ---- Explainability [TRAIN artefacts + SERVE per-request] -------------------
+shap==0.46.0
+numba==0.68.1             # shap dependency (pinned from verified lock)
+llvmlite==0.50.0          # numba dependency
+
+# ---- Backend API [SERVE] -----------------------------------------------------
+flask==3.0.3              # to be locked at Stage 4 env build (range was >=3.0,<3.2)
+flask-cors==5.0.0         # to be locked at Stage 4 env build
+pydantic==2.9.2           # request/response schemas (schema v1.1.0)
+python-dotenv==1.2.4
+requests==2.32.3          # Flask -> bridge HTTP client
+pymongo==4.10.1           # MongoDB Atlas access (audit log + chain index)
+dnspython==2.7.0          # required for mongodb+srv:// Atlas URIs
+gunicorn==22.0.0          # production server on Render
+
+# ---- Reporting / EDA [TRAIN only] -------------------------------------------
+matplotlib==3.11.2
+seaborn==0.13.2
+plotly==7.1.0
+
+# ---- Testing [TRAIN + SERVE] --------------------------------------------------
+pytest==9.2.0
+
+# =============================================================================
+# NOT Python dependencies (see their own specs):
+#   Frontend   : frontend_package_specification.md  (Node 24, npm 10)
+#   Blockchain : blockchain/package.json — hardhat 2.22.x, ethers 6.13.x,
+#                @openzeppelin/contracts 5.x (added on approval), typescript 5.6
+#   Bridge     : blockchain/bridge/package.json — express 4.x, ethers 6.13.x
+# Locking: after the Stage 4 backend env build, generate
+#   backend/requirements.lock.txt  (pip freeze) and commit it; this file stays
+#   the human-readable, decision-carrying source.
+# =============================================================================

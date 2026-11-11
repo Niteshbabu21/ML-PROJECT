@@ -1,0 +1,24 @@
+# Secrets — never commit filled environment files
+.env
+.env.*
+!.env.example
+*.pem
+*.key
+
+# Python
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.venv/
+
+# Node
+node_modules/
+dist/
+
+# Hardhat build outputs (sources, tests and deployment records stay)
+blockchain/artifacts/
+blockchain/cache/
+
+# OS / editor
+.DS_Store
+*.log

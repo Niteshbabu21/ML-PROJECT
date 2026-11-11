@@ -1,0 +1,550 @@
+{
+  "source_sha256": "b960388685fd0ce4e1935f4854fdf2256b556b7976b134d82aa4972525faa32b",
+  "rows": 29451,
+  "cols": 12,
+  "columns": [
+    "POSTED_BY",
+    "UNDER_CONSTRUCTION",
+    "RERA",
+    "BHK_NO.",
+    "BHK_OR_RK",
+    "SQUARE_FT",
+    "READY_TO_MOVE",
+    "RESALE",
+    "ADDRESS",
+    "LONGITUDE",
+    "LATITUDE",
+    "TARGET(PRICE_IN_LACS)"
+  ],
+  "dtypes": {
+    "POSTED_BY": "object",
+    "UNDER_CONSTRUCTION": "int64",
+    "RERA": "int64",
+    "BHK_NO.": "int64",
+    "BHK_OR_RK": "object",
+    "SQUARE_FT": "float64",
+    "READY_TO_MOVE": "int64",
+    "RESALE": "int64",
+    "ADDRESS": "object",
+    "LONGITUDE": "float64",
+    "LATITUDE": "float64",
+    "TARGET(PRICE_IN_LACS)": "float64"
+  },
+  "target": "TARGET(PRICE_IN_LACS)",
+  "feature_columns": [
+    "POSTED_BY",
+    "UNDER_CONSTRUCTION",
+    "RERA",
+    "BHK_NO.",
+    "BHK_OR_RK",
+    "SQUARE_FT",
+    "READY_TO_MOVE",
+    "RESALE",
+    "ADDRESS",
+    "LONGITUDE",
+    "LATITUDE"
+  ],
+  "sample_records": [
+    {
+      "POSTED_BY": "Owner",
+      "UNDER_CONSTRUCTION": 0,
+      "RERA": 0,
+      "BHK_NO.": 2,
+      "BHK_OR_RK": "BHK",
+      "SQUARE_FT": 1300.236407,
+      "READY_TO_MOVE": 1,
+      "RESALE": 1,
+      "ADDRESS": "Ksfc Layout,Bangalore",
+      "LONGITUDE": 12.96991,
+      "LATITUDE": 77.59796,
+      "TARGET(PRICE_IN_LACS)": 55.0
+    },
+    {
+      "POSTED_BY": "Dealer",
+      "UNDER_CONSTRUCTION": 0,
+      "RERA": 0,
+      "BHK_NO.": 2,
+      "BHK_OR_RK": "BHK",
+      "SQUARE_FT": 1275.0,
+      "READY_TO_MOVE": 1,
+      "RESALE": 1,
+      "ADDRESS": "Vishweshwara Nagar,Mysore",
+      "LONGITUDE": 12.274538,
+      "LATITUDE": 76.644605,
+      "TARGET(PRICE_IN_LACS)": 51.0
+    },
+    {
+      "POSTED_BY": "Owner",
+      "UNDER_CONSTRUCTION": 0,
+      "RERA": 0,
+      "BHK_NO.": 2,
+      "BHK_OR_RK": "BHK",
+      "SQUARE_FT": 933.1597222,
+      "READY_TO_MOVE": 1,
+      "RESALE": 1,
+      "ADDRESS": "Jigani,Bangalore",
+      "LONGITUDE": 12.778033,
+      "LATITUDE": 77.632191,
+      "TARGET(PRICE_IN_LACS)": 43.0
+    },
+    {
+      "POSTED_BY": "Owner",
+      "UNDER_CONSTRUCTION": 0,
+      "RERA": 1,
+      "BHK_NO.": 2,
+      "BHK_OR_RK": "BHK",
+      "SQUARE_FT": 929.9211427,
+      "READY_TO_MOVE": 1,
+      "RESALE": 1,
+      "ADDRESS": "Sector-1 Vaishali,Ghaziabad",
+      "LONGITUDE": 28.6423,
+      "LATITUDE": 77.3445,
+      "TARGET(PRICE_IN_LACS)": 62.5
+    },
+    {
+      "POSTED_BY": "Dealer",
+      "UNDER_CONSTRUCTION": 1,
+      "RERA": 0,
+      "BHK_NO.": 2,
+      "BHK_OR_RK": "BHK",
+      "SQUARE_FT": 999.009247,
+      "READY_TO_MOVE": 0,
+      "RESALE": 1,
+      "ADDRESS": "New Town,Kolkata",
+      "LONGITUDE": 22.5922,
+      "LATITUDE": 88.484911,
+      "TARGET(PRICE_IN_LACS)": 60.5
+    }
+  ],
+  "missing": {
+    "POSTED_BY": {
+      "nulls": 0,
+      "pct": 0.0,
+      "hidden_markers": 0
+    },
+    "UNDER_CONSTRUCTION": {
+      "nulls": 0,
+      "pct": 0.0,
+      "hidden_markers": 0
+    },
+    "RERA": {
+      "nulls": 0,
+      "pct": 0.0,
+      "hidden_markers": 0
+    },
+    "BHK_NO.": {
+      "nulls": 0,
+      "pct": 0.0,
+      "hidden_markers": 0
+    },
+    "BHK_OR_RK": {
+      "nulls": 0,
+      "pct": 0.0,
+      "hidden_markers": 0
+    },
+    "SQUARE_FT": {
+      "nulls": 0,
+      "pct": 0.0,
+      "hidden_markers": 0
+    },
+    "READY_TO_MOVE": {
+      "nulls": 0,
+      "pct": 0.0,
+      "hidden_markers": 0
+    },
+    "RESALE": {
+      "nulls": 0,
+      "pct": 0.0,
+      "hidden_markers": 0
+    },
+    "ADDRESS": {
+      "nulls": 0,
+      "pct": 0.0,
+      "hidden_markers": 0
+    },
+    "LONGITUDE": {
+      "nulls": 0,
+      "pct": 0.0,
+      "hidden_markers": 0
+    },
+    "LATITUDE": {
+      "nulls": 0,
+      "pct": 0.0,
+      "hidden_markers": 0
+    },
+    "TARGET(PRICE_IN_LACS)": {
+      "nulls": 0,
+      "pct": 0.0,
+      "hidden_markers": 0
+    }
+  },
+  "missing_total": 0,
+  "duplicates": {
+    "exact_duplicate_extra_rows": 401,
+    "rows_in_exact_duplicate_groups": 775,
+    "exact_duplicate_groups": 374,
+    "feature_identical_groups": 469,
+    "feature_identical_rows": 1006,
+    "groups_with_conflicting_price": 108,
+    "duplicate_property_groups": 622,
+    "duplicate_property_rows": 1362,
+    "property_groups_conflicting_price": 169,
+    "exact_duplicate_pairs": 429,
+    "expected_pairs_straddling_80_20": 137.3
+  },
+  "invalid": {
+    "price_non_positive": 0,
+    "price_missing_or_non_numeric": 0,
+    "sqft_zero_or_negative": 0,
+    "sqft_below_100": 27,
+    "sqft_above_20000": 154,
+    "sqft_above_100000": 72,
+    "sqft_max": 254545454.5,
+    "bhk_non_positive": 0,
+    "bhk_above_10": 14,
+    "bhk_max": 20.0,
+    "coords_plausible_as_labelled": 0,
+    "coords_plausible_after_swap": 29193,
+    "coords_implausible_either_way": 258
+  },
+  "target_stats": {
+    "min": 0.25,
+    "max": 30000.0,
+    "mean": 142.8987457132186,
+    "median": 62.0,
+    "std": 656.8807127981115,
+    "skew": 17.58333227553508,
+    "log1p_skew": 1.2144423873233,
+    "q1": 38.0,
+    "q3": 100.0,
+    "p1": 12.2,
+    "p95": 300.0,
+    "p99": 1045.0,
+    "iqr_outliers_above": 3084,
+    "iqr_outliers_below": 0,
+    "rows_above_1000_lacs": 298
+  },
+  "extremes": {
+    "top100_with_sqft_error": 99,
+    "genuine_luxury_rows_gt_1000_lacs_plausible_area": 160,
+    "genuine_luxury_median_ppsf_inr": 45723.49999934768,
+    "max_plausible_price_lacs": 9000.0,
+    "cheapest100_below_500_ppsf": 57,
+    "genuine_luxury_example": {
+      "address": "Breach Candy,Lalitpur",
+      "bhk": 7.0,
+      "sqft": 8199.932578,
+      "price_lacs": 9000.0,
+      "ppsf_inr": 109757.00000444565
+    }
+  },
+  "numeric_columns": [
+    "UNDER_CONSTRUCTION",
+    "RERA",
+    "BHK_NO.",
+    "SQUARE_FT",
+    "READY_TO_MOVE",
+    "RESALE",
+    "LONGITUDE",
+    "LATITUDE",
+    "TARGET(PRICE_IN_LACS)"
+  ],
+  "numeric_summary": {
+    "UNDER_CONSTRUCTION": {
+      "count": 29451.0,
+      "mean": 0.17975620522223354,
+      "std": 0.383990779174163,
+      "min": 0.0,
+      "25%": 0.0,
+      "50%": 0.0,
+      "75%": 0.0,
+      "max": 1.0
+    },
+    "RERA": {
+      "count": 29451.0,
+      "mean": 0.31791789752470206,
+      "std": 0.46567528510077866,
+      "min": 0.0,
+      "25%": 0.0,
+      "50%": 0.0,
+      "75%": 1.0,
+      "max": 1.0
+    },
+    "BHK_NO.": {
+      "count": 29451.0,
+      "mean": 2.3922787002139145,
+      "std": 0.8790912922151548,
+      "min": 1.0,
+      "25%": 2.0,
+      "50%": 2.0,
+      "75%": 3.0,
+      "max": 20.0
+    },
+    "SQUARE_FT": {
+      "count": 29451.0,
+      "mean": 19802.170190334724,
+      "std": 1901334.912503906,
+      "min": 3.0,
+      "25%": 900.0211296,
+      "50%": 1175.05675,
+      "75%": 1550.688124,
+      "max": 254545454.5
+    },
+    "READY_TO_MOVE": {
+      "count": 29451.0,
+      "mean": 0.8202437947777664,
+      "std": 0.3839907791741631,
+      "min": 0.0,
+      "25%": 1.0,
+      "50%": 1.0,
+      "75%": 1.0,
+      "max": 1.0
+    },
+    "RESALE": {
+      "count": 29451.0,
+      "mean": 0.929577943024006,
+      "std": 0.25586131734292034,
+      "min": 0.0,
+      "25%": 1.0,
+      "50%": 1.0,
+      "75%": 1.0,
+      "max": 1.0
+    },
+    "LONGITUDE": {
+      "count": 29451.0,
+      "mean": 21.300255165028354,
+      "std": 6.205306453735163,
+      "min": -37.7130075,
+      "25%": 18.452663,
+      "50%": 20.75,
+      "75%": 26.900926,
+      "max": 59.912884
+    },
+    "LATITUDE": {
+      "count": 29451.0,
+      "mean": 76.83769524877074,
+      "std": 10.557746673857764,
+      "min": -121.7612481,
+      "25%": 73.7981,
+      "50%": 77.324137,
+      "75%": 77.82873950000001,
+      "max": 152.962676
+    },
+    "TARGET(PRICE_IN_LACS)": {
+      "count": 29451.0,
+      "mean": 142.8987457132186,
+      "std": 656.8807127981115,
+      "min": 0.25,
+      "25%": 38.0,
+      "50%": 62.0,
+      "75%": 100.0,
+      "max": 30000.0
+    }
+  },
+  "categorical_summary": {
+    "POSTED_BY": {
+      "unique": 3,
+      "top": {
+        "Dealer": 18291,
+        "Owner": 10538,
+        "Builder": 622
+      },
+      "top_share_pct": 62.11
+    },
+    "BHK_OR_RK": {
+      "unique": 2,
+      "top": {
+        "BHK": 29427,
+        "RK": 24
+      },
+      "top_share_pct": 99.92
+    },
+    "ADDRESS": {
+      "unique": 6899,
+      "top": {
+        "Zirakpur,Chandigarh": 509,
+        "Whitefield,Bangalore": 230,
+        "Raj Nagar Extension,Ghaziabad": 215,
+        "Sector-137 Noida,Noida": 139,
+        "New Town,Kolkata": 131,
+        "Jagatpura,Jaipur": 120,
+        "Rajarhat,Kolkata": 113,
+        "Thanisandra,Bangalore": 110
+      },
+      "top_share_pct": 1.73
+    },
+    "UNDER_CONSTRUCTION": {
+      "unique": 2,
+      "top": {
+        "0": 24157,
+        "1": 5294
+      },
+      "top_share_pct": 82.02
+    },
+    "RERA": {
+      "unique": 2,
+      "top": {
+        "0": 20088,
+        "1": 9363
+      },
+      "top_share_pct": 68.21
+    },
+    "RESALE": {
+      "unique": 2,
+      "top": {
+        "1": 27377,
+        "0": 2074
+      },
+      "top_share_pct": 92.96
+    },
+    "READY_TO_MOVE": {
+      "unique": 2,
+      "top": {
+        "1": 24157,
+        "0": 5294
+      },
+      "top_share_pct": 82.02
+    }
+  },
+  "address": {
+    "unique_addresses": 6899,
+    "addresses_repeated": 3094,
+    "most_frequent_address": "Zirakpur,Chandigarh",
+    "most_frequent_address_rows": 509,
+    "segment_count_distribution": {
+      "2": 29250,
+      "3": 165,
+      "4": 29,
+      "5": 6,
+      "6": 1
+    },
+    "unique_localities": 5878,
+    "unique_city_labels_raw": 256,
+    "city_labels_that_are_states": [
+      "Goa",
+      "Maharashtra"
+    ],
+    "top_cities_raw": {
+      "Bangalore": 4340,
+      "Lalitpur": 2993,
+      "Mumbai": 2023,
+      "Pune": 1991,
+      "Noida": 1767,
+      "Kolkata": 1709,
+      "Maharashtra": 1579,
+      "Chennai": 1255,
+      "Ghaziabad": 1087,
+      "Jaipur": 962,
+      "Chandigarh": 696,
+      "Faridabad": 649,
+      "Mohali": 556,
+      "Vadodara": 510,
+      "Gurgaon": 430
+    },
+    "cities_with_lt_200_rows": 234,
+    "localities_under_multiple_city_labels": 597,
+    "median_price_by_top_city_lacs": {
+      "Bangalore": 77.75,
+      "Lalitpur": 110.0,
+      "Mumbai": 120.0,
+      "Pune": 67.0,
+      "Noida": 70.0,
+      "Kolkata": 47.4,
+      "Maharashtra": 130.0,
+      "Chennai": 50.0,
+      "Ghaziabad": 44.4,
+      "Jaipur": 36.05
+    }
+  },
+  "geography": {
+    "unique_coordinate_pairs": 4116,
+    "rows_sharing_a_coordinate_pair": 27565,
+    "max_rows_per_coordinate_pair": 1009,
+    "repaired_lat_range": [
+      -37.7130075,
+      59.912884
+    ],
+    "repaired_lon_range": [
+      -121.7612481,
+      152.962676
+    ]
+  },
+  "correlations_with_target": {
+    "UNDER_CONSTRUCTION": {
+      "pearson": 0.055399320984473664,
+      "spearman": 0.04261277131924386
+    },
+    "RERA": {
+      "pearson": 0.06763629509390529,
+      "spearman": 0.15086838421918233
+    },
+    "BHK_NO.": {
+      "pearson": 0.1122826699658554,
+      "spearman": 0.5006999005680689
+    },
+    "SQUARE_FT": {
+      "pearson": 0.4026846383520866,
+      "spearman": 0.5702629450768993
+    },
+    "RESALE": {
+      "pearson": -0.20737825307855556,
+      "spearman": -0.03689257858239365
+    },
+    "READY_TO_MOVE": {
+      "pearson": -0.055399320984473664,
+      "spearman": -0.04261277131924386
+    },
+    "LATITUDE_REPAIRED": {
+      "pearson": -0.03111213135388436,
+      "spearman": -0.1537953583304416
+    },
+    "LONGITUDE_REPAIRED": {
+      "pearson": -0.01725370476551543,
+      "spearman": -0.17100476411485685
+    },
+    "LOG_SQFT": {
+      "pearson": 0.59687270520867,
+      "spearman": 0.5702629450768993
+    },
+    "PRICE_PER_SQFT_INR": {
+      "pearson": 0.15959311716773655,
+      "spearman": 0.8161209531318827
+    }
+  },
+  "median_price_by_bhk_lacs": {
+    "1": 32.9,
+    "2": 49.5,
+    "3": 80.0,
+    "4": 190.0,
+    "5": 340.0,
+    "6": 600.0,
+    "7": 160.0,
+    "8": 375.0,
+    "9": 220.0,
+    "10": 227.5
+  },
+  "ppsf_stats_inr": {
+    "count": 29451.0,
+    "mean": 7503.93833828314,
+    "std": 10847.976909823623,
+    "min": 1.0,
+    "25%": 3551.500001007732,
+    "50%": 5095.000000350656,
+    "75%": 8055.000000287679,
+    "max": 900000.0
+  },
+  "leakage": {
+    "target_derived_columns_present": [],
+    "predictors_with_abs_spearman_ge_0_9": [],
+    "note_ppsf": "PRICE_PER_SQFT is computed in this audit for exploration only; it is target-derived and must never be a model feature.",
+    "ready_to_move_is_exact_complement_of_under_construction": true,
+    "risk": "Group-level: duplicates, repeated addresses/localities and shared locality coordinates straddle a naive random split."
+  },
+  "inconsistencies": {
+    "rk_rows": 24,
+    "rk_rows_with_bhk_no_above_1": 0,
+    "sqft_per_bhk_below_100": 43,
+    "sqft_per_bhk_above_5000": 171,
+    "bhk_or_rk_share_bhk_pct": 99.92
+  }
+}

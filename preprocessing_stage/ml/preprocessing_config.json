@@ -1,0 +1,55 @@
+{
+  "preprocessing_version": "3.0.0-stage",
+  "schema_file": "ml/feature_schema.json",
+  "input_cleaned_dataset": "/home/hatch/workspace/goals/machine-learning-real-estate-valuation-and-blockchain-tokenisation-build/files/eda_stage/dataset/processed/cleaned_dataset.csv",
+  "rows_in": 28622,
+  "train_rows": 22897,
+  "test_rows": 5725,
+  "split": "train_test_split 80/20 shuffle seed=42, BEFORE any fitting",
+  "fitted_on": "training split only",
+  "engineer": {
+    "kept_cities": [
+      "Bangalore",
+      "Chandigarh",
+      "Chennai",
+      "Faridabad",
+      "Ghaziabad",
+      "Gurgaon",
+      "Indore",
+      "Jaipur",
+      "Kolkata",
+      "Lucknow",
+      "Mohali",
+      "Mumbai",
+      "Nagpur",
+      "Noida",
+      "Other",
+      "Pune",
+      "Surat",
+      "Vadodara"
+    ],
+    "n_city_centroids": 17,
+    "n_geo_clusters": 32,
+    "city_min_rows": 200,
+    "centroid_min_rows": 200
+  },
+  "target": {
+    "name": "TARGET(PRICE_IN_LACS)",
+    "raw_skew_train": 16.79292313910605,
+    "log1p_skew_train": 0.6783341191136109,
+    "transform": "log1p at modelling layer; metrics on \u20b9 lakh after expm1 inverse",
+    "clipped": false
+  },
+  "variants_encoded_width": {
+    "tree": 243,
+    "linear": 243,
+    "catboost": 20,
+    "lightgbm": 20
+  },
+  "locality_encoding": "one-hot min_frequency=25 (tree/linear); native category with 'Unknown' fallback (catboost/lightgbm)",
+  "prohibited": [
+    "price_per_sqft or any target-derived feature",
+    "target encoding fitted outside the pipeline",
+    "any statistic fitted on validation/test data"
+  ]
+}

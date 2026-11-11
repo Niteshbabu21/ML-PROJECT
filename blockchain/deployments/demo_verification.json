@@ -1,0 +1,35 @@
+{
+  "network": "localhost",
+  "chainId": 31337,
+  "contract": "0x5FbDB2315678afecb367f032d93F642f64180aa3",
+  "steps": [
+    {
+      "name": "registerProperty",
+      "txHash": "0x6385e1419d55aa96efbf7c377f8b8c8f0c988a90adde151ce43a353dc7c1791f"
+    },
+    {
+      "name": "mintPropertyTokens",
+      "txHash": "0xbf43d38783438b6f28e60a523358f8a41d151c9716efdb03d6284fb08bb55935"
+    },
+    {
+      "name": "buyTokens x100",
+      "txHash": "0xc7faea2d606835f03245857eaf0688593d44efad92740c807ce9a7fdf3b4a014",
+      "buyer": "0x70997970C51812dc3A010C7d01b50e0d17dc79C8"
+    },
+    {
+      "name": "safeTransferFrom x40",
+      "txHash": "0x764d7afe869ef5c3173ef5ee11473f7c642b807dfc5291b77f996e0c92437de7",
+      "from": "0x70997970C51812dc3A010C7d01b50e0d17dc79C8",
+      "to": "0x3C44CdDdB6a900fa2b585dd299e03d12FA4293BC"
+    }
+  ],
+  "finalState": {
+    "propertyId": 1,
+    "tokenSupply": 982,
+    "residualInr": 1000,
+    "availableSupply": 882,
+    "buyerBalance": 60,
+    "friendBalance": 40,
+    "contractBalanceWei": "100000000000000000"
+  }
+}

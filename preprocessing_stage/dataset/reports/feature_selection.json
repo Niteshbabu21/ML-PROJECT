@@ -1,0 +1,202 @@
+[
+  {
+    "feature": "POSTED_BY",
+    "missing_pct": 0.0,
+    "cardinality": 3,
+    "top_value_share_pct": 62.04,
+    "kind": "categorical",
+    "group_median_spread_ratio": 0.647,
+    "recommendation": "keep",
+    "reason": "train association 0.647 (median-spread ratio)"
+  },
+  {
+    "feature": "UNDER_CONSTRUCTION",
+    "missing_pct": 0.0,
+    "cardinality": 2,
+    "top_value_share_pct": 82.05,
+    "kind": "binary",
+    "group_median_spread_ratio": 0.082,
+    "recommendation": "keep",
+    "reason": "train association 0.082 (median-spread ratio)"
+  },
+  {
+    "feature": "RERA",
+    "missing_pct": 0.0,
+    "cardinality": 2,
+    "top_value_share_pct": 68.29,
+    "kind": "binary",
+    "group_median_spread_ratio": 0.264,
+    "recommendation": "keep",
+    "reason": "train association 0.264 (median-spread ratio)"
+  },
+  {
+    "feature": "BHK_NO.",
+    "missing_pct": 0.0,
+    "cardinality": 16,
+    "top_value_share_pct": 45.45,
+    "kind": "numeric",
+    "spearman_with_target": 0.5019,
+    "recommendation": "keep",
+    "reason": "train association 0.502 (Spearman)"
+  },
+  {
+    "feature": "BHK_OR_RK",
+    "missing_pct": 0.0,
+    "cardinality": 2,
+    "top_value_share_pct": 99.92,
+    "kind": "categorical",
+    "group_median_spread_ratio": 0.396,
+    "recommendation": "keep_flagged",
+    "reason": "quasi-constant (99.9% one value) \u2014 near-zero signal expected; retained for schema stability, drop if ablation agrees"
+  },
+  {
+    "feature": "SQUARE_FT",
+    "missing_pct": 0.0,
+    "cardinality": 15957,
+    "top_value_share_pct": 1.63,
+    "kind": "numeric",
+    "spearman_with_target": 0.5609,
+    "recommendation": "keep",
+    "reason": "train association 0.561 (Spearman)"
+  },
+  {
+    "feature": "RESALE",
+    "missing_pct": 0.0,
+    "cardinality": 2,
+    "top_value_share_pct": 93.34,
+    "kind": "binary",
+    "group_median_spread_ratio": 0.049,
+    "recommendation": "keep",
+    "reason": "train association 0.049 (median-spread ratio)"
+  },
+  {
+    "feature": "CITY",
+    "missing_pct": 0.0,
+    "cardinality": 18,
+    "top_value_share_pct": 22.89,
+    "kind": "categorical",
+    "group_median_spread_ratio": 1.771,
+    "recommendation": "keep",
+    "reason": "train association 1.771 (median-spread ratio)"
+  },
+  {
+    "feature": "LOCALITY",
+    "missing_pct": 0.0,
+    "cardinality": 5152,
+    "top_value_share_pct": 1.83,
+    "kind": "categorical",
+    "group_median_spread_ratio": 114.493,
+    "recommendation": "keep_flagged",
+    "reason": "very high cardinality (5152) \u2014 encoded with min_frequency=25 / native fallback so rare and unseen localities are safe"
+  },
+  {
+    "feature": "LATITUDE",
+    "missing_pct": 0.0,
+    "cardinality": 3626,
+    "top_value_share_pct": 3.44,
+    "kind": "numeric",
+    "spearman_with_target": -0.156,
+    "recommendation": "keep",
+    "reason": "train association 0.156 (Spearman)"
+  },
+  {
+    "feature": "LONGITUDE",
+    "missing_pct": 0.0,
+    "cardinality": 3617,
+    "top_value_share_pct": 3.44,
+    "kind": "numeric",
+    "spearman_with_target": -0.1774,
+    "recommendation": "keep",
+    "reason": "train association 0.177 (Spearman)"
+  },
+  {
+    "feature": "SQUARE_FT_PER_BHK",
+    "missing_pct": 0.0,
+    "cardinality": 16522,
+    "top_value_share_pct": 2.0,
+    "kind": "numeric",
+    "spearman_with_target": 0.2823,
+    "recommendation": "keep",
+    "reason": "train association 0.282 (Spearman)"
+  },
+  {
+    "feature": "LOG_SQUARE_FT",
+    "missing_pct": 0.0,
+    "cardinality": 15957,
+    "top_value_share_pct": 1.63,
+    "kind": "numeric",
+    "spearman_with_target": 0.5609,
+    "recommendation": "keep",
+    "reason": "train association 0.561 (Spearman)"
+  },
+  {
+    "feature": "DIST_TO_CITY_CENTROID",
+    "missing_pct": 22.894,
+    "cardinality": 2096,
+    "top_value_share_pct": 2.89,
+    "kind": "numeric",
+    "spearman_with_target": 0.0051,
+    "recommendation": "drop_candidate",
+    "reason": "near-zero monotone association with target on train (|Spearman| 0.005)"
+  },
+  {
+    "feature": "CITY_FREQ",
+    "missing_pct": 0.0,
+    "cardinality": 18,
+    "top_value_share_pct": 22.89,
+    "kind": "numeric",
+    "spearman_with_target": 0.0729,
+    "recommendation": "keep",
+    "reason": "train association 0.073 (Spearman)"
+  },
+  {
+    "feature": "LOCALITY_FREQ",
+    "missing_pct": 0.0,
+    "cardinality": 92,
+    "top_value_share_pct": 12.05,
+    "kind": "numeric",
+    "spearman_with_target": 0.2495,
+    "recommendation": "keep",
+    "reason": "train association 0.249 (Spearman)"
+  },
+  {
+    "feature": "LAT_LON_INTERACTION",
+    "missing_pct": 0.0,
+    "cardinality": 3652,
+    "top_value_share_pct": 3.44,
+    "kind": "numeric",
+    "spearman_with_target": -0.1775,
+    "recommendation": "keep_flagged",
+    "reason": "experimental engineered feature \u2014 retained for the training stage to ablate, not assumed useful"
+  },
+  {
+    "feature": "SQFT_BAND",
+    "missing_pct": 0.0,
+    "cardinality": 5,
+    "top_value_share_pct": 39.74,
+    "kind": "categorical",
+    "group_median_spread_ratio": 3.822,
+    "recommendation": "keep",
+    "reason": "train association 3.822 (median-spread ratio)"
+  },
+  {
+    "feature": "BHK_CONFIG",
+    "missing_pct": 0.0,
+    "cardinality": 17,
+    "top_value_share_pct": 45.45,
+    "kind": "categorical",
+    "group_median_spread_ratio": 11.153,
+    "recommendation": "keep",
+    "reason": "train association 11.153 (median-spread ratio)"
+  },
+  {
+    "feature": "GEO_CLUSTER",
+    "missing_pct": 0.0,
+    "cardinality": 32,
+    "top_value_share_pct": 17.08,
+    "kind": "categorical",
+    "group_median_spread_ratio": 1.532,
+    "recommendation": "keep_flagged",
+    "reason": "experimental engineered feature \u2014 retained for the training stage to ablate, not assumed useful"
+  }
+]

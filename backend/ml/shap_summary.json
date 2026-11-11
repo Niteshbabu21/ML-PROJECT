@@ -1,0 +1,88 @@
+{
+  "base_value_log": 4.212835311889648,
+  "baseline_price_lacs": 66.55,
+  "sample_size": 2000,
+  "ranking": [
+    {
+      "feature": "SQUARE_FT",
+      "mean_abs_shap_log": 0.3303
+    },
+    {
+      "feature": "CITY",
+      "mean_abs_shap_log": 0.2451
+    },
+    {
+      "feature": "LAT_LON_INTERACTION",
+      "mean_abs_shap_log": 0.1092
+    },
+    {
+      "feature": "CITY_FREQ",
+      "mean_abs_shap_log": 0.083
+    },
+    {
+      "feature": "DIST_TO_CITY_CENTROID",
+      "mean_abs_shap_log": 0.0766
+    },
+    {
+      "feature": "LONGITUDE",
+      "mean_abs_shap_log": 0.0719
+    },
+    {
+      "feature": "BHK_NO.",
+      "mean_abs_shap_log": 0.0681
+    },
+    {
+      "feature": "GEO_CLUSTER",
+      "mean_abs_shap_log": 0.0645
+    },
+    {
+      "feature": "POSTED_BY",
+      "mean_abs_shap_log": 0.0416
+    },
+    {
+      "feature": "LATITUDE",
+      "mean_abs_shap_log": 0.0374
+    },
+    {
+      "feature": "LOCALITY_FREQ",
+      "mean_abs_shap_log": 0.0304
+    },
+    {
+      "feature": "SQUARE_FT_PER_BHK",
+      "mean_abs_shap_log": 0.0287
+    },
+    {
+      "feature": "LOCALITY",
+      "mean_abs_shap_log": 0.0244
+    },
+    {
+      "feature": "RERA",
+      "mean_abs_shap_log": 0.0102
+    },
+    {
+      "feature": "BHK_CONFIG",
+      "mean_abs_shap_log": 0.0095
+    },
+    {
+      "feature": "UNDER_CONSTRUCTION",
+      "mean_abs_shap_log": 0.006
+    },
+    {
+      "feature": "SQFT_BAND",
+      "mean_abs_shap_log": 0.0058
+    },
+    {
+      "feature": "RESALE",
+      "mean_abs_shap_log": 0.0035
+    },
+    {
+      "feature": "LOG_SQUARE_FT",
+      "mean_abs_shap_log": 0.0021
+    },
+    {
+      "feature": "BHK_OR_RK",
+      "mean_abs_shap_log": 0.0002
+    }
+  ],
+  "provenance": "Computed with shap.TreeExplainer over the packaged E01 XGBoost on a 2,000-row sample (seed 42) of the train+validation data the model was fitted on; encoded SHAP aggregated to source features (see shap_config.json)."
+}

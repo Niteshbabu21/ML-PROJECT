@@ -1,0 +1,23 @@
+{
+  "champion": "E01",
+  "description": "Optuna XGBoost best",
+  "valid_rmse": 76.28459445200014,
+  "valid_r2": 0.8431688000077104,
+  "cv_r2_mean": 0.8248488850952015,
+  "cv_r2_std": 0.05637938915583801,
+  "test_scored_this_stage": true,
+  "test": {
+    "r2": 0.7423023449083983,
+    "mae_lacs": 21.4586225726862,
+    "mse": 5531.739059649808,
+    "rmse_lacs": 74.37566174260104,
+    "mape_pct": 28.082945664244228,
+    "mape_coverage_pct": 100.0,
+    "smape_pct": 19.658411007638684,
+    "explained_variance": 0.7433549161182996,
+    "median_ae_lacs": 8.240854641902157,
+    "train_time_s": 17.21,
+    "predict_time_s": 0.0,
+    "n": 4284
+  }
+}

@@ -1,0 +1,38 @@
+[
+  {
+    "step": "C0 raw file loaded",
+    "rows_after": 29451,
+    "rows_removed": 0,
+    "note": ""
+  },
+  {
+    "step": "C1 exact duplicate rows dropped",
+    "rows_after": 29050,
+    "rows_removed": 401,
+    "note": ""
+  },
+  {
+    "step": "C2 coordinates swapped; rows implausible under both readings dropped",
+    "rows_after": 28795,
+    "rows_removed": 255,
+    "note": ""
+  },
+  {
+    "step": "C3 SQUARE_FT outside [100, 20000] dropped",
+    "rows_after": 28622,
+    "rows_removed": 173,
+    "note": ""
+  },
+  {
+    "step": "C4 READY_TO_MOVE dropped (exact complement of UNDER_CONSTRUCTION)",
+    "rows_after": 28622,
+    "rows_removed": 0,
+    "note": ""
+  },
+  {
+    "step": "C5 categorical values validated against verified schema",
+    "rows_after": 28622,
+    "rows_removed": 0,
+    "note": ""
+  }
+]

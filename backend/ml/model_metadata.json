@@ -1,0 +1,71 @@
+{
+  "model": {
+    "name": "XGBoost Regressor (Optuna-tuned, experiment E01)",
+    "library": "xgboost",
+    "library_version": "3.0.5",
+    "kind": "single",
+    "hyperparameters": {
+      "max_depth": 6,
+      "n_estimators": 1154,
+      "learning_rate": 0.08744449930348354,
+      "subsample": 0.6403061068247125,
+      "colsample_bytree": 0.9769636446946159,
+      "min_child_weight": 7,
+      "reg_alpha": 0.02976233580888122,
+      "reg_lambda": 5.532822921094283,
+      "gamma": 0.07203537254137132
+    },
+    "best_iteration": 1154,
+    "preprocessing": "ColumnTransformer fitted on the training data of this stage: median imputation for numerics, most-frequent for binary/categorical, one-hot encoding (LOCALITY with min_frequency=25), no scaling (tree model)"
+  },
+  "training": {
+    "fitted_on": "train + validation partitions (24,328 rows) with hyperparameters and iteration count frozen from validation-based selection",
+    "data": "preprocessing stage model_ready_dataset.csv (28,622 rows, 20 engineered features)",
+    "split_protocol": "grouped 70/15/15 by feature signature, seed 42 (train 20,037 / validation 4,301 / test 4,284; zero signature overlap)",
+    "target_transform": "log1p (inverse: expm1, clipped to [0, log1p(50000)] in log space)",
+    "selection_rule": "lowest validation RMSE across all optimisation-stage experiments (E01: \u20b976.28L vs previous winner E00: \u20b978.65L; ensemble E09: \u20b976.70L)"
+  },
+  "metrics": {
+    "validation": {
+      "r2": 0.8431688000077104,
+      "mae_lacs": 22.64304335930616,
+      "rmse_lacs": 76.28459445200014,
+      "note": "Optuna best trial 14 of 20"
+    },
+    "grouped_cv": {
+      "r2_mean": 0.8248488850952015,
+      "r2_std": 0.05637938915583801,
+      "folds_r2": [
+        0.8273,
+        0.8927,
+        0.7546
+      ],
+      "note": "3-fold GroupKFold by feature signature, inside the training partition (experiment E10)"
+    },
+    "test": {
+      "r2": 0.7423023449083983,
+      "mae_lacs": 21.4586225726862,
+      "mse": 5531.739059649808,
+      "rmse_lacs": 74.37566174260104,
+      "mape_pct": 28.082945664244228,
+      "smape_pct": 19.658411007638684,
+      "explained_variance": 0.7433549161182996,
+      "median_ae_lacs": 8.240854641902157,
+      "n": 4284,
+      "note": "Scored exactly once in the optimisation stage (experiment E11), after selection, on the untouched grouped test partition; reproduced by this packaged artifact at build time."
+    }
+  },
+  "environment": {
+    "python": "3.12.3",
+    "numpy": "2.0.2",
+    "pandas": "2.3.3",
+    "scikit_learn": "1.6.1",
+    "xgboost": "3.0.5",
+    "joblib": "1.6.0"
+  },
+  "provenance": {
+    "stage": "optimisation stage (post-training performance investigation)",
+    "experiment_log": "optimization_stage/ml/experiment_log.csv",
+    "supersedes": "training stage winner (tuned XGBoost, validation R\u00b2 0.8333, test R\u00b2 0.7368)"
+  }
+}

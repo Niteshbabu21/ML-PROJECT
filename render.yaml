@@ -1,0 +1,35 @@
+# Render Blueprint for the Flask backend.
+# Deploy: Render dashboard → New → Blueprint → point at this repository
+# (root directory of this file), or create the service manually with the
+# same settings. See DEPLOYMENT.md for the full walkthrough.
+services:
+  - type: web
+    name: realestate-valuation-api
+    runtime: python
+    rootDir: backend
+    buildCommand: pip install -r requirements.txt
+    # One worker: the ML model (~a few hundred MB with libraries) is
+    # loaded once per process at startup; scale by instance size, not
+    # by worker count, on memory-constrained plans.
+    startCommand: gunicorn app:app --bind 0.0.0.0:$PORT --workers 1 --timeout 180
+    healthCheckPath: /api/health
+    envVars:
+      - key: FLASK_ENV
+        value: production
+      - key: SECRET_KEY
+        generateValue: true
+      - key: PYTHON_VERSION
+        value: 3.12.3
+      # Set in the Render dashboard (never in this file):
+      - key: MONGO_URI
+        sync: false        # MongoDB Atlas connection string
+      - key: CORS_ORIGINS
+        sync: false        # e.g. https://<your-app>.vercel.app
+      - key: ADMIN_API_KEY
+        sync: false        # long random value; protects chain writes
+      - key: HISTORY_BACKEND
+        value: mongo
+      # Blockchain stays OFF in the hosted showcase unless a reachable
+      # RPC + deployment are configured (see DEPLOYMENT.md §5):
+      - key: CHAIN_RPC_URL
+        value: http://127.0.0.1:8545

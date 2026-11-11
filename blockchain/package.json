@@ -1,0 +1,19 @@
+{
+  "name": "real-estate-tokenisation-blockchain",
+  "private": true,
+  "version": "1.0.0",
+  "description": "PropertyToken (ERC-1155) contracts for the ML real-estate valuation and risk-aware tokenisation capstone. Academic prototype on a local Hardhat network — tokens do NOT legally represent ownership of physical property.",
+  "scripts": {
+    "compile": "hardhat compile",
+    "test": "hardhat test",
+    "node": "hardhat node",
+    "deploy:local": "hardhat run scripts/deploy.js --network localhost",
+    "demo:local": "hardhat run scripts/demo-flow.js --network localhost"
+  },
+  "devDependencies": {
+    "@nomicfoundation/hardhat-toolbox": "^5.0.0",
+    "@openzeppelin/contracts": "^5.0.2",
+    "ethers": "^6.13.2",
+    "hardhat": "^2.22.19"
+  }
+}

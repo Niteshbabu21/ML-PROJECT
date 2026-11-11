@@ -1,0 +1,18 @@
+{
+  "propertyId": 1,
+  "steps": [
+    {
+      "name": "buyTokens x25 (wallet flow)",
+      "txHash": "0xe5814f4004e6552e00d093f595e86a08ef788bcf842cd89eaa3e19fa5912751b"
+    },
+    {
+      "name": "safeTransferFrom x10",
+      "txHash": "0x30f88a5ab4b6cfbb005ff64080c7d68db1f556d4f2fa67cb5e4b87599136f973"
+    }
+  ],
+  "finalState": {
+    "buyerBalance": 15,
+    "friendBalance": 10,
+    "availableSupply": 727
+  }
+}
